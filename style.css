@@ -1,0 +1,31 @@
+body {
+    font-size:14px;
+    font-family: 'Montserrat', sans-serif;
+}
+header {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    border-bottom:1px solid white;
+    height : 10vh;
+    background: linear-gradient(to right, #2E6F95, #455E89, #5C4D7D, #723C70, #892B64);
+}
+main {
+    height : 90vh;
+    background: linear-gradient(to right, #2E6F95, #455E89, #5C4D7D, #723C70, #892B64);
+    width:100%;
+}
+footer {
+    height : 20vh;
+    background-color:white;
+    width:100%;
+}
+figure {
+    height : 10vh;
+    text-align:center;
+}
+img {
+    height : 10vh;
+}
+nav {
+    list-style: none;
+}

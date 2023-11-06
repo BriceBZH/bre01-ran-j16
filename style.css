@@ -30,23 +30,21 @@ body#homepage {
     height : 90vh;
     width:100%;
 }
-#homepage > footer {
-    background-color:white;
-}
-header > figure {
-    background-color:green;
+#homepage > header > figure {
     text-align:center;
+    margin:0;
+    padding:0;
 }
-img {
+#homepage > header > figure > img {
     height : 10vh;
 }
-nav {
+#homepage > header > nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height : 10vh;
     list-style: none;
 }
-li {
+#homepage > header > nav > li {
     display: grid;
     grid-column: 1fr;
     height : auto;
@@ -54,13 +52,21 @@ li {
     padding-top:4vh;
     /*vertical-align:center;*/
 }
+/* première partie main */
 #homepage > main > section:first-child {
-    background-color:red;
-    margin-right:10%;
-    margin-left:10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-right:10vw;
+    margin-left:10vw;
     color:white;
     height:60vh;
 }
+/* partie gauche 1ere section main */
+#homepage > main > section:first-child > section {
+    display: grid;
+    grid-column: 1fr;
+}
+/*1ere section main partie gauche */
 #homepage > main > section:first-child h2 {
     font-family: 'Cabin', sans-serif;
     font-size: 6rem, graisse 700;
@@ -69,14 +75,17 @@ li {
     font-family: 'Cabin', sans-serif;
     font-size: 3.5rem, graisse 700;
 }
+/* partie droite */
+#homepage > main > section:first-child > section:nth-child(2) > figure > img {
+    height : 60vh;
+}
 /* Deuxième partie main */
 #homepage > main > section:nth-child(2) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    background-color:green;
-    margin-right:10%;
-    margin-left:10%;
+    grid-template-rows: 2;
+    margin-right:10vw;
+    margin-left:10vw;
     color:white;
     height:60vh;
 }
@@ -84,17 +93,18 @@ li {
 #homepage > main > section:nth-child(2) h2 {
     font-family: 'Cabin', sans-serif;
     font-size: 2.5rem, graisse 700;
-    background-color:blue;
     display: grid;
-    grid-columns: 3fr;
-    grid-row: 1fr;
+    grid-column: 1fr;
+    grid-row: 1;
 }
 /* Différent projet */
 #homepage > main > section:nth-child(2) > section {
     display: grid;
     grid-column: 1fr;
-    grid-row: 2fr;
-    /*background-color:yellow;*/
+    grid-row: 2; 
+    background-color:#B7094C;
+    margin-right:10px;
+    padding-left:10px;
 }
 /* Titre projet */
 #homepage > main > section:nth-child(2) > section > h3 {
@@ -105,16 +115,48 @@ li {
 #homepage > main > section:nth-child(2) > section > p:first-child {
     font-family: 'Cabin', sans-serif;
     font-size: 1.3rem, graisse 700;
-    background-color:pink;
+    /*background-color:pink;*/
 }
 /* description projet */
 #homepage > main > section:nth-child(2) > section > p:nth-child(2) {
     font-family: 'Cabin', sans-serif;
     font-size: 1.3rem, graisse 700;
-    background-color:red;
+    /*background-color:red;*/
 }
 /* Lien projet */
 #homepage > main > section:nth-child(2) > section > a {
     text-underline-offset:0.25rem;
     color:white;
+}
+/* Footer */
+#homepage > footer {
+    background-color:white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2;
+}
+#homepage > footer > h3 {
+    text-align:center;
+    display: grid;
+    grid-column: 1fr;
+    grid-row: 1;
+    color:#060b0e;
+}
+#homepage > footer > menu {
+    list-style: none;
+    display: grid;
+    grid-column: 1fr;
+    grid-row: 2;
+}
+#homepage > footer > menu:first-child > li > a {
+    background-color:yellow;
+    color:#a01a58;
+}
+#homepage > footer > menu:nth-child(2) {
+    background-color:yellow;
+    /*color:#723c70;*/
+    color:blue;
+}
+#homepage > footer > menu:nth-child(3) > li > a {
+    color:red;
 }

@@ -4,11 +4,12 @@ html {
 body {
     margin:0;
     padding:0;
-    max-width:100vw; /* ?????? */
+    max-width:100vw;
     min-height:100vh;
     display: grid;
     grid-template-rows: 10vh 90vh 20vh;
     font-family: 'Montserrat', sans-serif;
+    grid-template-columns: 15% 70% 15%;
 }
 body#homepage {
     background: linear-gradient(
@@ -22,62 +23,73 @@ body#homepage {
 }
 #homepage > header {
     display: grid;
+    grid-column: 1 / 4;
     grid-template-columns: 20% 80%;
     border-bottom:1px solid white;
-    height : 10vh;
 }
-#homepage > main {
-    height : 90vh;
-    width:100%;
+#homepage > header figure {
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#homepage > header > figure {
-    text-align:center;
+#homepage > header figure img {
+    height:8vh;
+}
+#homepage > header nav ul {
+    height:100%;
     margin:0;
     padding:0;
-}
-#homepage > header > figure > img {
-    height : 10vh;
-}
-#homepage > header > nav {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    height : 10vh;
     list-style: none;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    grid-template-columns: repeat(3, 1fr);
 }
-#homepage > header > nav > li {
-    display: grid;
-    grid-column: 1fr;
-    height : auto;
-    color:white;
-    padding-top:4vh;
-    /*vertical-align:center;*/
+#homepage > header nav li {
+    display: flex;
+    align-items: center;
+}
+#homepage > header nav a {
+    color: white;
+    text-decoration: none;
+}
+#homepage > header nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+}
+/* main */
+#homepage > main {
+    grid-column: 1 / 4;
 }
 /* première partie main */
 #homepage > main > section:first-child {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-right:10vw;
     margin-left:10vw;
     color:white;
     height:60vh;
 }
-/* partie gauche 1ere section main */
-#homepage > main > section:first-child > section {
+#homepage > main > section:first-child  {
     display: grid;
     grid-column: 1fr;
 }
-/*1ere section main partie gauche */
-#homepage > main > section:first-child h2 {
+/* partie gauche 1ere section main */
+#homepage > main > section:first-child > section:first-child > h2 {
     font-family: 'Cabin', sans-serif;
-    font-size: 6rem, graisse 700;
+    font-size: 6rem;
+    font-weight: graisse 700;
 }
-#homepage > main > section:first-child p {
+#homepage > main > section:first-child > section:first-child > p {
     font-family: 'Cabin', sans-serif;
-    font-size: 3.5rem, graisse 700;
+    font-size: 3.5rem;
+    font-weight: graisse 700;
 }
 /* partie droite */
-#homepage > main > section:first-child > section:nth-child(2) > figure > img {
-    height : 60vh;
+#homepage > main > section:first-child > section:nth-child(3) > figure > img {
+    height : 40vh;
 }
 /* Deuxième partie main */
 #homepage > main > section:nth-child(2) {
@@ -92,7 +104,8 @@ body#homepage {
 /* Titre deuxième partie main */
 #homepage > main > section:nth-child(2) h2 {
     font-family: 'Cabin', sans-serif;
-    font-size: 2.5rem, graisse 700;
+    font-size: 2.5rem;
+    font-weight: graisse 700;
     display: grid;
     grid-column: 1fr;
     grid-row: 1;
@@ -109,18 +122,21 @@ body#homepage {
 /* Titre projet */
 #homepage > main > section:nth-child(2) > section > h3 {
     font-family: 'Cabin', sans-serif;
-    font-size: 1.7rem, graisse 700;
+    font-size: 1.7rem;
+    font-weight: graisse 700;
 }
 /* Type projet */
 #homepage > main > section:nth-child(2) > section > p:first-child {
     font-family: 'Cabin', sans-serif;
-    font-size: 1.3rem, graisse 700;
+    font-size: 1.3rem;
+    font-weight: graisse 700;
     /*background-color:pink;*/
 }
 /* description projet */
 #homepage > main > section:nth-child(2) > section > p:nth-child(2) {
     font-family: 'Cabin', sans-serif;
-    font-size: 1.3rem, graisse 700;
+    font-size: 1.3rem;
+    font-weight: graisse 700;
     /*background-color:red;*/
 }
 /* Lien projet */
@@ -131,12 +147,14 @@ body#homepage {
 /* Footer */
 #homepage > footer {
     background-color:white;
+    grid-column: 1 / 4;
     display: grid;
+    width:100%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 2;
 }
 #homepage > footer > h3 {
-    text-align:center;
+    background-color:blue;
     display: grid;
     grid-column: 1fr;
     grid-row: 1;
@@ -148,15 +166,18 @@ body#homepage {
     grid-column: 1fr;
     grid-row: 2;
 }
-#homepage > footer > menu:first-child > li > a {
+#homepage > footer > menu > ul {
+    list-style: none;
+    text-align:center;
+}
+#homepage > footer menu:first-child a {
     background-color:yellow;
     color:#a01a58;
 }
-#homepage > footer > menu:nth-child(2) {
-    background-color:yellow;
-    /*color:#723c70;*/
-    color:blue;
+#homepage > footer > menu:nth-child(2) a {
+    background-color:blue;
+    color:#723c70;
 }
-#homepage > footer > menu:nth-child(3) > li > a {
-    color:red;
+#homepage > footer > menu:nth-child(3) a {
+    color:#455e89;
 }
